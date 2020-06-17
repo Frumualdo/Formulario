@@ -96,3 +96,27 @@ function validar(formulario) {
     return b.test(txt);
 }
 
+function validaFecha(ano, mes, dia) {
+    var anoNum = parseInt(ano, 10);
+    var mesNum = parseInt(mes, 10)-1;
+    var diaNum = parseInt(dia, 10);
+    if ((anoNum<1900)||(anoNum>2100)) return false;
+    var fechaAno = new Date(anoNum,1,1); // Para tener el año a 4 dígitos
+    var fechaDate = new Date(anoNum, mesNum, diaNum); // Paso a fmt fecha
+    return (fechaAno.getFullYear() == fechaDate.getFullYear() &&
+            mesNum == fechaDate.getMonth()) ? "Fecha correcta" : "fecha incorrecta";
+  }
+
+  function validarr() {
+    var ano = document.getElementById('ano').value ;
+    var mes = document.getElementById('mes').value ;
+    var dia = document.getElementById('dia').value ;
+    alert(validaFecha(ano, mes, dia));
+    return false;
+  }
+
+  function bisiesto(ano) {
+    if ((ano<1900)||(ano>2100)) return false;
+    return  (((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0))
+  }
+
