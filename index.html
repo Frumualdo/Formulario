@@ -21,34 +21,38 @@
         <input type="submit" value="Enviar Datos" name="enviar">
         <input type="reset" value="Borrar Datos" name="borrar">
     </form>
-    <br><br>   
-</body>
-</html>
-<form action="" onsubmit="validarr(); return false;">
+    <br><br>
+    <form action="" onsubmit="validarr(); return false;">
           
-    Fecha Correcta(fecha incorrecta si febrero tiene mas de 29 dias y mes 13):
-    <input id="dia" type="text" value="" size="2" maxlength="2"/>
-    <input id="mes" type="text" value="" size="2" maxlength="2"/>
-    <input id="ano" type="text" value="" size="4" maxlength="4"/>
-    <input type="submit" value="Validar" />
-  
-</form>
+            Fecha Correcta(fecha incorrecta si febrero tiene mas de 29 dias y mes 13):
+            <input id="dia" type="text" value="" size="2" maxlength="2"/>
+            <input id="mes" type="text" value="" size="2" maxlength="2"/>
+            <input id="ano" type="text" value="" size="4" maxlength="4"/>
+            <input type="submit" value="Validar" />
+          
+        </form>
 <br><br>
-<form action="" onsubmit="alert(bisiesto(document.getElementById('anobis').value));return false;">
+        <form action="" onsubmit="alert(bisiesto(document.getElementById('anobis').value));return false;">
+      
+            Año bisiesto tru/false(año limite de 1900 a 2100):
+            <input id="anobis" type="number" min="1900" max="2100"value="" size="4" maxlength="4"/>
+            <input type="submit" value="Comprobar"/>
+          
+        </form>
 
-    Año bisiesto tru/false(año limite de 1900 a 2100):
-    <input id="anobis" type="number" min="1900" max="2100"value="" size="4" maxlength="4"/>
-    <input type="submit" value="Comprobar"/>
-  
-</form>
+        
+<br><br>
 <form action="" onsubmit="porcentaje(this)">
 
-    Porcentaje de H/M desde la cantidad de alumnos(numero cualquiera): <input type="submit" value="porcentaje" />
+     Porcentaje de H/M desde la cantidad de alumnos(numero cualquiera): <input type="submit" value="porcentaje" />
 <br><br>
-    <form>
-        
-       Obtencion de la edad conforme a(dia, mes, año):<input type='date' id='miEdad'><button type='button' onclick='Edad();'>Calcular Edad</button>
+     <form>
+         
+        Obtencion de la edad conforme a(dia, mes, año):<input type='date' id='miEdad'><button type='button' onclick='Edad();'>Calcular Edad</button>
 <p id='Edadcalculada'>
-    </form>
-   
+     </form>
+    
 </form>
+
+</body>
+</html>
